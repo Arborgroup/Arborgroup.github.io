@@ -1,0 +1,44 @@
+// ---------- Colors ---------- //
+$color__white: #fff
+$color__grey: #636363
+$color__darkgrey: #202020
+$color__bordergrey: #5D5D5D
+
+// ---------- Fonts ---------- //
+
+// All the font things.
+=font__primary
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, sans-serif
+
+// ---------- Functions ---------- //
+
+// Media Queries
+$screen-xs: "screen and (min-width:32.5em)"
+$screen-sm: "screen and (min-width:52.5em)"
+$screen-md: "screen and (min-width:65em)"
+$screen-lg: "screen and (min-width:70em)"
+$screen-xl: "screen and (min-width:85em)"
+
+$work-sm: "screen and (min-width:45em)"
+
+// Rem Conversions
+// The UI is based on a 16px base, however this mixin allows us to let SASS calculate this for us on the fly. You can then instead more naturally enter the px/pt value instead of calculating REM manually (i.e. 32 automatically throws in 2rem).
+
+@function rem($size)
+  $rem-size: $size / 16
+  @return #{$rem-size}rem  
+=font-size($size)
+  font-size: $size + px
+  font-size: rem($size)
+  
+// Calc CSS, fairly self explanatory and handy in a pinch.
+=calc($property, $expression)
+  #{$property}: -webkit-calc(#{$expression}) 
+  #{$property}: calc(#{$expression}) 
+
+// Tinting and shading allows easy and maintainable adjustments of a base color (e.g. highlighting a button on hover). Might not be necessary for Glidz, but good to have.
+@function tint($color, $percentage)
+  @return mix(white, $color, $percentage)
+@function shade($color, $percentage)
+  @return mix(black, $color, $percentage)
+    
