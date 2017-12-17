@@ -17,6 +17,12 @@
   background: $color__teal-dark
   border-radius: 0.25rem
   position: relative
+  transition: opacity 0.5s ease-in-out
+  &:hover
+    opacity: 0.95
+    img,
+    svg
+      width: 10.5rem
   svg,
   img
     position: absolute
@@ -25,6 +31,7 @@
     transform: translate(-50%, -50%)
     width: 10rem
     height: auto
+    transition: width 0.5s ease-in-out
 .product__image--office
   background: url("/assets/images/bg-office.png") center center / cover no-repeat
 .product__image--skyscraper
@@ -36,7 +43,7 @@
   width: 50%
 .product__title
   margin: 0 0 1rem
-  +font-size(32)
+  +font-size(36)
 .product__description
   line-height: 1.5
   margin: 0 0 1rem
@@ -44,4 +51,9 @@
 .product__cta
   color: $color__teal-dark
   text-transform: uppercase
+  opacity: 0.75
+  transition: opacity 0.15s ease-in-out
   +font-size(14)
+  &:hover,
+  &:active
+    opacity: 1

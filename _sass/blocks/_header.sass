@@ -5,7 +5,7 @@
 
 .header__logo
   float: left
-  width: 7.5rem
+  width: 8.5rem
   transform: translateX(-1.75rem)
 .header__nav
   float: right
@@ -14,8 +14,14 @@
   
 .header__navitem
   float: left
+  Margin: 0 0 0 0.5rem
 .header__navlink
   padding: 0.5rem
   color: $color__white
   text-transform: uppercase
-  +font-size(12)
+  +font-size(14)
+  opacity: 0.5
+  transition: opacity 0.15s ease-in-out
+  &:hover,
+  &:active
+    opacity: 1
