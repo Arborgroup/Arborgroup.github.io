@@ -6,14 +6,18 @@
   
 .pattern--hero
   position: absolute
-  bottom: -12rem
+  bottom: -14rem
   right: 0
-
+  @media #{$screen-sm}
+    bottom: -12rem
 .pattern--body
-  position: absolute
-  bottom: 4rem
-  left: -12rem
+  display: none
 
+  @media #{$screen-md}
+    display: block
+    position: absolute
+    bottom: 4rem
+    left: -12rem
 .pattern--contact
   position: absolute
   bottom: -19rem

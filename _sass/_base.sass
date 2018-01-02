@@ -53,7 +53,11 @@ h1, h2, h3
   font-weight: 300
 h1
   line-height: 1.25
-  +font-size(56)
+  +font-size(36)
+  @media #{$screen-sm}
+    +font-size(48)
+  @media #{$screen-md}
+    +font-size(56)
 h2
   line-height: 1.25
   margin: 0 0 1rem
