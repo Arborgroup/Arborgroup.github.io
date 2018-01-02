@@ -1,0 +1,28 @@
+.subscribe
+  margin: 2rem 0 0
+  position: relative
+  max-width: 40rem
+.subscribe__text
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+  transition: border 0.15s ease-in-out
+  &:hover,
+  &:active
+    border-bottom: 1px solid $color__white
+
+.subscribe__btn
+  display: inline-block
+  border: none
+  cursor: pointer
+  outline: none
+  cursor: pointer
+  -webkit-appearance: none
+  background: url(/assets/svgs/i-arrow-right.svg) right center / 1rem 1rem no-repeat
+  position: absolute
+  height: 3rem
+  width: 3rem
+  top: 50%
+  right: 0
+  opacity: 0.75
+  +transform(translateY(-50%))
+  &:hover, &:active
+    opacity: 1

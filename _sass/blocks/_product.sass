@@ -1,0 +1,78 @@
+.product
+  overflow: hidden
+  margin: 0 0 4rem
+  border: 1px solid transparentize($color__teal-light, 0.75)
+  border-radius: 0.5rem
+  &:last-of-type
+    margin-bottom: 0
+  @media #{$screen-sm}
+    border: none
+    &:nth-of-type(odd)
+      .product__details
+        padding-left: 3rem
+      .product__image
+        float: left
+    &:nth-of-type(even)
+      .product__details
+        padding-right: 3rem
+      .product__image
+        float: right
+    
+.product__image
+  float: left
+  box-sizing: border-box
+  width: 100%
+  height: 20rem
+  background: $color__teal-dark
+  border-radius: 0.25rem 0.25rem 0 0
+  position: relative
+  transition: opacity 0.5s ease-in-out
+  @media #{$screen-sm}
+    width: 50%
+    height: 16rem
+    border-radius: 0.25rem
+  &:hover
+    opacity: 0.95
+    img,
+    svg
+      width: 10.5rem
+  svg,
+  img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 10rem
+    height: auto
+    transition: width 0.5s ease-in-out
+.product__image--office
+  background: url("/assets/images/bg-office.png") center center / cover no-repeat
+.product__image--skyscraper
+  background: url("/assets/images/bg-skyscraper.png") center center / cover no-repeat
+.product__details
+  padding: 4rem 2rem
+  text-align: center
+  display: inline-block
+  box-sizing: border-box
+  width: 100%
+  @media #{$screen-sm}
+    width: 50%
+    float: left
+    text-align: center
+    padding: 3rem 0
+.product__title
+  margin: 0 0 1rem
+  +font-size(36)
+.product__description
+  line-height: 1.5
+  margin: 0 0 1rem
+  +font-size(16)
+.product__cta
+  color: $color__teal-dark
+  text-transform: uppercase
+  opacity: 0.75
+  transition: opacity 0.15s ease-in-out
+  +font-size(14)
+  &:hover,
+  &:active
+    opacity: 1

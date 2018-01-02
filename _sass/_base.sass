@@ -1,0 +1,109 @@
+// -------------------- Base Styles -------------------- //
+html
+  font-size: 14px
+  height: 100%
+  // background-color: orange
+  @media #{$screen-xs}
+    font-size: 16px
+    // background-color: green
+  @media #{$screen-sm}
+    // background-color: cyan
+  @media #{$screen-md}
+    // background-color: lavender
+  @media #{$screen-lg}
+    // background-color: pink
+    font-size: 18px
+  @media #{$screen-xl}
+    // background-color: purple
+    font-size: 20px
+body
+
+  font-weight: 400
+  color: $color__teal-light
+  @media #{$screen-sm}
+    padding-top: 0
+  cursor: default
+  min-height: 100%
+  +font__primary
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -moz-font-feature-settings: "liga" on
+  &:after
+    content: ""
+    display: table
+    clear: both
+a
+  text-decoration: none
+  font-weight: 700
+  color: $color__teal-dark
+  cursor: pointer
+ul
+  padding: 0
+  margin: 0
+li
+  list-style-type: none
+p
+  line-height: 1.5
+  margin: 0 0 1rem
+  +font-size(18)
+  font-weight: 400
+h1, h2, h3
+  color: $color__teal-dark
+  font-weight: 300
+h1
+  line-height: 1.25
+  +font-size(36)
+  @media #{$screen-sm}
+    +font-size(48)
+  @media #{$screen-md}
+    +font-size(56)
+h2
+  line-height: 1.25
+  margin: 0 0 1rem
+  +font-size(36)
+input,
+textarea,
+select,
+button
+  -webkit-appearance: none
+button
+  border: none
+  border-radius: 0
+  background: none
+  padding: 0
+  outline: none
+  cursor: pointer
+svg
+  width: 100%
+  height: auto
+.hover
+  -webkit-user-select: none
+  -webkit-touch-callout: none
+// Clearfix class, for the rare cases that things go pear-shaped.
+.cf:after
+  content: ""
+  display: table
+  clear: both
+.pull-left
+  float: left
+.pull-right
+  float: right
+.strong
+  font-weight: 600
+
+\::-webkit-input-placeholder
+  /* Chrome/Opera/Safari
+  color: rgba(255, 255, 255, 0.5)
+
+\::-moz-placeholder
+  /* Firefox 19+
+  color: rgba(255, 255, 255, 0.5)
+
+\:-ms-input-placeholder
+  /* IE 10+
+  color: rgba(255, 255, 255, 0.5)
+
+\:-moz-placeholder
+  /* Firefox 18-
+  color: rgba(255, 255, 255, 0.5)
