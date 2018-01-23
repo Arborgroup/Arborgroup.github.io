@@ -1,10 +1,12 @@
 .section
   background-color: $color__white
   color: $color__teal-light
-  padding: 4rem 2rem
+  padding: 2.5rem 1rem
   overflow: hidden
   position: relative
   text-align: center
+  @media #{$screen-xs}
+    padding: 4rem 2rem
   @media #{$screen-sm}
     padding: 7rem 2rem
     text-align: left
@@ -16,7 +18,9 @@
   h1, h2, h3
     color: $color__white
 .section--hero
-  padding: 3rem 2rem 5rem
+  padding: 3rem 1rem 5rem
+  @media #{$screen-xs}
+    padding: 3rem 2rem 5rem
   @media #{$screen-sm}
     padding: 7rem 2rem
   @media #{$screen-md}
