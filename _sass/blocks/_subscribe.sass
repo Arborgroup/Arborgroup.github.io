@@ -8,6 +8,12 @@
   &:hover,
   &:active
     border-bottom: 1px solid $color__white
+  &:-webkit-autofill
+    -webkit-text-fill-color: $color__white!important
+    box-shadow: inset 0 0 0 20rem $color__teal-dark
+  &:-webkit-autofill:focus
+    -webkit-box-shadow: inset 0 0 0 20rem $color__teal-dark
+    -webkit-text-fill-color: $color__white!important
 
 .subscribe__btn
   display: inline-block
